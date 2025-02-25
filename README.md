@@ -15,10 +15,12 @@ The model uses the **RAVDESS dataset**, which consists of:
 - **1440 video recordings** (corresponding facial expressions).
 - **8 emotion categories**: Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised.
 
+📌 *Example From Dataset:* ![Example](Example.png)
+
 ## 📊 Workflow
 The flowchart below provides an overview of the entire process from data acquisition to classification:
 
-📌 *Workflow Representation:* ![Flowchart](path/to/flowchart.png)
+📌 *Workflow Representation:* ![Flowchart](Flowchart.png)
 
 ## 🏗️ Model Architecture
 ### 🎵 **Audio Processing Pipeline**
@@ -26,14 +28,14 @@ The flowchart below provides an overview of the entire process from data acquisi
 2. **GRU Model:** Three stacked **GRU layers** with 256, 256, and 128 units.
 3. **Batch Normalization & Dense Layers:** Flatten layer followed by softmax output for classification.
 
-📌 *Model architecture representation:* ![GRU Model](path/to/gru_model.png)
+📌 *Model architecture representation:* ![GRU Model](GRU_Model.png)
 
 ### 🎥 **Video Processing Pipeline**
 1. **Frame Extraction:** Grayscale frames extracted using `OpenCV`.
 2. **CNN Model:** 4 convolutional layers with max-pooling and dropout.
 3. **Fully Connected Layer:** Dense layers for final classification.
 
-📌 *Model architecture representation:* ![CNN Model](path/to/cnn_model.png)
+📌 *Model architecture representation:* ![CNN Model](CNN_Model.jpeg)
 
 ## ⚙️ Installation & Setup
 ### 1️⃣ Clone the Repository
@@ -57,13 +59,13 @@ The model was evaluated using **accuracy, F1-score, confusion matrix, and ROC cu
 
 ### 🎵 **Audio Model Results**
 - **Accuracy**: ~91%
-- **Confusion Matrix**: ![Audio Confusion Matrix](path/to/audio_confusion_matrix.png)
-- **ROC Curves**: ![Audio ROC Curve](path/to/audio_roc_curve.png)
+- **Confusion Matrix**: ![Audio Confusion Matrix](Audio_Confusion_Matrix.png)
+- **ROC Curves**: ![Audio ROC Curve](Audio_ROC_Curve.png)
 
 ### 🎥 **Video Model Results**
 - **Accuracy**: ~93%
-- **Confusion Matrix**: ![Video Confusion Matrix](path/to/video_confusion_matrix.png)
-- **ROC Curves**: ![Video ROC Curve](path/to/video_roc_curve.png)
+- **Confusion Matrix**: ![Video Confusion Matrix](Video_Confusion_Matrix.png)
+- **ROC Curves**: ![Video ROC Curve](Video_ROC_Curve.png)
 
 ## 🔮 Future Improvements
 - **Fusion Techniques**: Improve integration of audio and video models for higher accuracy.
